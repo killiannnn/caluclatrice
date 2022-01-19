@@ -8,7 +8,15 @@ document.querySelectorAll(".boutonCalc").forEach(function(bouton) {
             return 
         }
 
-        // TODO BOUTON SUPPR
+        if (click.target.id === "suppr"){
+            result.innerHTML = result.innerHTML.substring(0, result.innerHTML.length - 1)
+           
+            if (result.innerHTML.length === 0) result.innerHTML = "0"
+            
+            return
+        }
+        
+        
 
         if (click.target.id === "egal") {
             try {
