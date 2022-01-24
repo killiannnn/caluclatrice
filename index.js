@@ -20,11 +20,16 @@ document.querySelectorAll(".boutonCalc").forEach(function(bouton) {
 
         if (click.target.id === "egal") {
             try {
-                result.innerHTML = eval(result.innerHTML)
+                result.innerHTML = eval(result.innerHTML).toFixed(2)
             } catch(err) {
                 result.innerHTML = "Syntax Error"
             }
 
+            return
+        }
+
+        if (click.target.id === "PI") {
+            result.innerHTML = result.innerHTML + Math.PI
             return
         }
         
