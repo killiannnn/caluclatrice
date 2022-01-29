@@ -8,6 +8,16 @@ document.querySelectorAll(".boutonCalc").forEach(function(bouton) {
             return 
         }
 
+        if (click.target.id === "cos") {
+            result.innerHTML = "cos" + result.innerHTML
+            return
+        }
+
+        if (click.target.id === "egal") {
+            result.innerHTML = result.innerHTML.replace('cos','');
+            result.innerHTML = Math.cos(result.innerHTML)
+        }
+
         if (click.target.id === "suppr"){
             result.innerHTML = result.innerHTML.substring(0, result.innerHTML.length - 1)
            
